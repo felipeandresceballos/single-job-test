@@ -19,7 +19,6 @@ pipeline {
             sh "npm install"
             sh "uname -a;uptime;df -h"
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
-          }
       }
     }
     post {
@@ -28,4 +27,5 @@ pipeline {
         }
     }
   }
+ }
 }
